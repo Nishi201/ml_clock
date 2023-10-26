@@ -25,8 +25,3 @@ steps:
   displayName: 'Install dependencies'
   workingDirectory: "$(System.DefaultWorkingDirectory)"
   python pipeline_test.py
-
-#- script: |
-#    pip install pytest pytest-azurepipelines
-#    pytest
-# displayName: 'pytest'
