@@ -1,9 +1,9 @@
 
 import subprocess
 
-get_api_url = "https://dev.refract-fosfor.com/registry/api/v1/model/export-model"
+get_api_url = "https://qa.refract-fosfor.com/registry/api/v1/model/export-model"
 
-post_api_url = "https://dev.refract-fosfor.com/registry/api/v1/model/export-model"
+post_api_url = "https://qa.refract-fosfor.com/registry/api/v1/model/export-model"
 
 auth_token = "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ4WTdTd3k5UE1xaXRDQmNSMm5qcVl6bmoxS3NqZzV3TmdOV0xDVzdyUkhvIn0.eyJleHAiOjE3MzAzNzcwMTgsImlhdCI6MTY5ODMyMjYxOCwiYXV0aF90aW1lIjoxNjk4MzIyNTU3LCJqdGkiOiIxZDk1ZDU3YS04NDk2LTQ2ZWYtYjZjYi00MDVmMzg5NzhlZTciLCJpc3MiOiJodHRwczovL3FhLWF1dGgucmVmcmFjdC1mb3Nmb3IuY29tL2F1dGgvcmVhbG1zL21vc2FpYyIsImF1ZCI6WyJtb3NhaWMtZ2F0ZWtlZXBlciIsImFjY291bnQiXSwic3ViIjoiMzdlNGRhNGMtNjZhMi00MjMwLWEyZjQtYjBhODU1YTViYTFlIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zYWljLWdhdGVrZWVwZXIiLCJzZXNzaW9uX3N0YXRlIjoiMjIzNzBmNDQtNDEyYi00ZjJlLTg5ZTgtNTg5MGRkMjY4YjQ5IiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1MT1BTIiwibG9uZ19saXZlZF90b2tlbiIsInNwZWN0cmEtZGV2ZWxvcGVyIiwicmVmcmFjdC1kZXZlbG9wZXIiLCJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwidW1hX2F1dGhvcml6YXRpb24iLCJyZWZyYWN0LWFkbWluIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSIsInNpZCI6IjIyMzcwZjQ0LTQxMmItNGYyZS04OWU4LTU4OTBkZDI2OGI0OSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IlJlZnJhY3QgQWRtaW4iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJyZWZyYWN0LmFkbWluIiwiZ2l2ZW5fbmFtZSI6IlJlZnJhY3QiLCJmYW1pbHlfbmFtZSI6IkFkbWluIiwiZW1haWwiOiJyZWZyYWN0LmFkbWluQGZvc2Zvci5jb20ifQ.fTzsdQqvWk3Dt2DW4tTE8LGhMFs6hknnodgNcpBJd2SpIwxhqrvoKSvBVfJf8amKCsxzvwGUAtu3sTZ5cq1BJkW_vVv1inGKlOCdN4HOP9eaM6dDOEltCgtihsTsou2fXXbZXYdMBbAGPQZKhkv9qdoyZcl1quZQiXR0mNApaqiGn46S9w9ooTL72rl87-yboz3IDRLiammF56P1eqim0lI5UJsLJI0f5AO__1mfol7G2-LxspCXR69gZnepatW85XZVVHVBN-GrFos-ve7AontMv1NvTdjaExFIS2zCvTwT5VR5NNDt0ly_w3PwAsWKc2pIyPSMmc77QFdZFjvkMQ"
 get_command = f'curl -H "Authorization: Bearer {auth_token}" {get_api_url}'
@@ -21,5 +21,5 @@ post_data = {
 
 post_data_json = json.dumps(post_data)
 
-post_command = f'curl -H "Authorization: Bearer {auth_token}" -H "Content-Type: application/json" -d \'{post_data_json}\' -X POST {https://dev.refract-fosfor.com/registry/api/v1/model/export-model}'
+post_command = f'curl -H "Authorization: Bearer {auth_token}" -H "Content-Type: application/json" -d \'{post_data_json}\' -X POST {https://qa.refract-fosfor.com/registry/api/v1/model/export-model}'
 post_response = subprocess.check_output(post_command, shell=True)
